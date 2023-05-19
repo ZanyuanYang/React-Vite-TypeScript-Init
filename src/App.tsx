@@ -1,18 +1,32 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import Button from '@mui/material/Button';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Home, Dashboard, Error, PrivateRoute } from './pages';
+
+const routes = [
+  { path: '/', element: <Home />, auth: false },
+  { path: '/dashboard', element: <Dashboard />, auth: true },
+  { path: '*', element: <Error />, auth: false },
+];
 
 function App() {
   return (
-    <form>
-      <input
-        id="dinosaur_name"
-        name="dinosaur_name"
-        className="dinosaur_name"
-        aria-describedby="dinosaur_name_info"
-      />
-      <Button variant="contained">Contained</Button>
-      <h1 className="text-slate-400 font-bold">asdasd</h1>
-    </form>
+    <Routes>
+      {routes.map((route) => {
+        return (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              route.auth ? (
+                <PrivateRoute>{route.element}</PrivateRoute>
+              ) : (
+                route.element
+              )
+            }
+          />
+        );
+      })}
+    </Routes>
   );
 }
 

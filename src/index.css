@@ -101,8 +101,8 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(34, 34, 44, 0.97);
-  color: var(--color-white);
+  /*background-color: rgba(34, 34, 44, 0.97);*/
+  /*color: var(--color-white);*/
   width: calc(100vw - (var(--scrollbar-width, 0px)));
 }
 

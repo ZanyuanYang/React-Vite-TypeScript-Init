@@ -26,5 +26,12 @@ module.exports = {
     ],
     "rules": {
         "react/react-in-jsx-scope": 0,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": [
+            "error",
+            { "allow": ["_id"] }
+        ]
     }
 }
