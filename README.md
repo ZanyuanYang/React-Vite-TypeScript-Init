@@ -1,6 +1,4 @@
-# React + Vite + TypeScript
-
-This is a template for [Vite](https://vitejs.dev/) projects.
+# Preset AI Frontend
 
 ## Getting Started
 
@@ -10,6 +8,7 @@ First, run the development server:
 npm install
 npm run dev
 ```
+visited http://localhost:5173/
 
 ## Package
 
