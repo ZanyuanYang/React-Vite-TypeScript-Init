@@ -1,4 +1,4 @@
-# Preset AI Frontend
+# React + TypeScript + Vite
 
 ## Getting Started
 
